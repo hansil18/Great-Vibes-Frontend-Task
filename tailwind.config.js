@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         'custom_primary': '#1597E4',
+        'placeholder_color': '#7A7A7A'
       }
     }
   },
