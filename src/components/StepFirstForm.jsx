@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import StepSecondForm from "./StepSecondForm";
 
 function StepFirstForm(props) {
@@ -38,15 +38,15 @@ function StepFirstForm(props) {
           <div
             className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
           >
-            <div className="relative w-577 my-6 mx-auto max-w-3xl">
+            <div className="relative my-6 mx-auto max-w-3xl">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white">
                 {/*header*/}
-                <div className="flex justify-between p-5 border-b border-solid border-slate-200 rounded-t">
-                  <h3 className="text-2xl font-semibold">
+                <div className="flex justify-between p-5 border-solid border-slate-200 rounded-t">
+                  <h3 className="text-3xl font-semibold">
                     Create a Job
                   </h3>
-                  <div className="text-1xl font-semibold">
+                  <div className="text-2xl font-semibold">
                     Step 1
                   </div>
                 </div>
@@ -55,7 +55,7 @@ function StepFirstForm(props) {
                   <form class="w-full max-w-lg">
                     <div class="flex flex-wrap -mx-3 mb-6">
                       <div class="w-full px-3 mb-6 md:mb-0">
-                        <div class="flex uppercase tracking-wide text-xs font-bold mb-2" for="grid-first-name">
+                        <div class="flex tracking-wide text-xs font-bold mb-2" for="grid-first-name">
                           Job Title
                           <div class="text-red-500">*</div>
                         </div>
@@ -65,7 +65,7 @@ function StepFirstForm(props) {
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                       <div class="w-full px-3 mb-6 md:mb-0">
-                        <div class="flex uppercase tracking-wide text-xs font-bold mb-2" for="grid-first-name">
+                        <div class="flex tracking-wide text-xs font-bold mb-2" for="grid-first-name">
                           Company Name
                           <div class="text-red-500">*</div>
                         </div>
@@ -75,7 +75,7 @@ function StepFirstForm(props) {
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                       <div class="w-full px-3 mb-6 md:mb-0">
-                        <div class="flex uppercase tracking-wide text-xs font-bold mb-2" for="grid-first-name">
+                        <div class="flex tracking-wide text-xs font-bold mb-2" for="grid-first-name">
                           Industry
                           <div class="text-red-500">*</div>
                         </div>
@@ -85,13 +85,13 @@ function StepFirstForm(props) {
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-2">
                       <div class="w-1/2 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
                           Location
                         </label>
                         <input value={props.jobData.location} name="location" onChange={(e) => onValueChange(e)} class="appearance-none block w-full border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="ex. Chennai" />
                       </div>
                       <div class="w-1/2 px-3 mb-6 md:mb-0">
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
                           Remote Type
                         </label>
                         <input value={props.jobData.remote_type} name="remote_type" onChange={(e) => onValueChange(e)} class="appearance-none block w-full border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="ex. In-office" />
@@ -100,9 +100,9 @@ function StepFirstForm(props) {
                   </form>
                 </div>
                 {/*footer*/}
-                <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                <div className="flex items-center justify-end p-6 border-solid border-slate-200 rounded-b">
                   <button
-                    className="bg-custom_primary text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className="bg-custom_primary text-white active:bg-emerald-600 font-bold  text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                     onClick={handleNextButtonClick}
                   >
