@@ -3,7 +3,7 @@ import React from "react";
 function JobsDetailsPage(props) {
   return (
     <>
-      <div class="grid grid-cols-2 gap-4 p-4 overflow-y-auto absolute overflow-x-hidden  w-full z-50">
+      <div class="grid grid-cols-2 gap-4 p-4 overflow-y-auto absolute overflow-x-hidden w-full z-50">
         {
           props.jobDetails ?
             props.jobDetails.filter((job) => (job.is_quick_apply === props.jobData.is_quick_apply)).map((job) => (
@@ -19,16 +19,16 @@ function JobsDetailsPage(props) {
                   <h6 class="text-xs text-gray-400">
                     {job.location} ({job.remote_type})
                   </h6>
-                  <h5 class="text-xs mt-4">
+                  <h5 class="text-xs mt-4 mb-2">
                     Part-Time(9.00 am - 5.00pm IST)
                   </h5>
-                  <h5 class="text-xs">
+                  <h5 class="text-xs mb-2">
                     Experience  ({job.min_experience} - {job.max_experience} years)
                   </h5>
-                  <h5 class="text-xs">
+                  <h5 class="text-xs mb-2">
                     INR(₹) {job.min_salary} - {job.max_salary} / Month
                   </h5>
-                  <h5 class="text-xs">
+                  <h5 class="text-xs mb-2">
                     {job.total_employees} employees
                   </h5>
 
