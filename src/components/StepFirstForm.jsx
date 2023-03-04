@@ -55,7 +55,7 @@ function StepFirstForm(props) {
                   <form class="w-full max-w-lg">
                     <div class="flex flex-wrap -mx-3 mb-6">
                       <div class="w-full px-3 mb-6 md:mb-0">
-                        <div class="flex tracking-wide text-xs font-bold mb-2" for="grid-first-name">
+                        <div class="flex tracking-wide text-sm font-bold mb-2" for="grid-first-name">
                           Job Title
                           <div class="text-red-500">*</div>
                         </div>
@@ -65,7 +65,7 @@ function StepFirstForm(props) {
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                       <div class="w-full px-3 mb-6 md:mb-0">
-                        <div class="flex tracking-wide text-xs font-bold mb-2" for="grid-first-name">
+                        <div class="flex tracking-wide text-sm font-bold mb-2" for="grid-first-name">
                           Company Name
                           <div class="text-red-500">*</div>
                         </div>
@@ -75,7 +75,7 @@ function StepFirstForm(props) {
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                       <div class="w-full px-3 mb-6 md:mb-0">
-                        <div class="flex tracking-wide text-xs font-bold mb-2" for="grid-first-name">
+                        <div class="flex tracking-wide text-sm font-bold mb-2" for="grid-first-name">
                           Industry
                           <div class="text-red-500">*</div>
                         </div>
@@ -85,13 +85,13 @@ function StepFirstForm(props) {
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-2">
                       <div class="w-1/2 px-3 mb-6 md:mb-0">
-                        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-city">
+                        <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-city">
                           Location
                         </label>
                         <input value={props.jobData.location} name="location" onChange={(e) => onValueChange(e)} class="appearance-none block w-full border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="ex. Chennai" />
                       </div>
                       <div class="w-1/2 px-3 mb-6 md:mb-0">
-                        <label class="block tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-zip">
+                        <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-zip">
                           Remote Type
                         </label>
                         <input value={props.jobData.remote_type} name="remote_type" onChange={(e) => onValueChange(e)} class="appearance-none block w-full border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="ex. In-office" />

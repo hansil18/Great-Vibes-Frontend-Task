@@ -6,7 +6,7 @@ import { jobDataFromGetRequest } from "../services/jobDataReceiveGetRequest"
 function JobsDetailsPage(props) {
   return (
     <>
-      <div class="grid grid-cols-2 gap-4 p-4 fixed w-full z-50">
+      <div class="grid grid-cols-2 gap-4 p-4 overflow-y-auto absolute overflow-x-hidden  w-full z-50">
         {
           props.jobDetails ?
             props.jobDetails.filter((job) => (job.is_quick_apply === props.jobData.is_quick_apply)).map((job) => (
