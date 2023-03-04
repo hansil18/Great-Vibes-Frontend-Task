@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { useState } from 'react';
 import url from '../constants/mockapiUrl';
 
 export const jobDataSendPostRequest = async (jobData) => {
