@@ -16,11 +16,11 @@ function StepSecondForm(props) {
   }
 
   const onValueChange = (e) => {
-    if (e.target.id == "bordered-radio-1") {
+    if (e.target.id === "bordered-radio-1") {
       console.log("hell")
       props.setJobData({ ...props.jobData, "is_quick_apply": true })
     }
-    else if (e.target.id == "bordered-radio-2") {
+    else if (e.target.id === "bordered-radio-2") {
       props.setJobData({ ...props.jobData, "is_quick_apply": false })
     }
     else {

@@ -1,6 +1,5 @@
 import './App.css';
 import React from "react";
-import { useEffect } from 'react';
 import StepFirstForm from './components/StepFirstForm';
 import jobJsonDataStructure from './constants/jobJsonDataStructure'; 
 
@@ -11,9 +10,9 @@ function App() {
   return (
     <>
       <button
-        className="bg-pink-500 font-poppins text-white active:bg-pink-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+        className="bg-custom_primary mx-5 my-5 flex content-center font-poppins text-white font-bold text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
         type="button"
-        onClick={() => setShowModal(true)}
+        onClick={() => setShowModal(!showModal)}
       >
         Create Job
       </button>

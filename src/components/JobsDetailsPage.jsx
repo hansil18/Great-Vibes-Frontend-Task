@@ -1,7 +1,4 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { jobDataSendPostRequest } from "../services/jobDataSendPostRequest";
-import { jobDataFromGetRequest } from "../services/jobDataReceiveGetRequest"
 
 function JobsDetailsPage(props) {
   return (
