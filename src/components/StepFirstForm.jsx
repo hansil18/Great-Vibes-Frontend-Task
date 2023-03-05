@@ -32,7 +32,7 @@ function StepFirstForm(props) {
   return (
     <>
       {showSecondStep ?
-        <StepSecondForm jobData={props.jobData} setJobData={props.setJobData} />
+        <StepSecondForm jobData={props.jobData} setJobData={props.setJobData} fontType="poppins"/>
         :
         <>
           <div
@@ -43,10 +43,10 @@ function StepFirstForm(props) {
               <div className="border-0 rounded-lg shadow-lg relative p-9 flex flex-col w-full bg-white">
                 {/*header*/}
                 <div className="flex justify-between border-solid border-slate-200 rounded-t">
-                  <h3 className="text-xl font-semibold">
+                  <h3 className={`text-xl font-semibold font-${props.fontType}`}>
                     Create a Job
                   </h3>
-                  <div className="text-sm font-semibold">
+                  <div className={`text-sm font-semibold font-${props.fontType}`}>
                     Step 1
                   </div>
                 </div>
@@ -55,46 +55,46 @@ function StepFirstForm(props) {
                   <form class="w-full max-w-lg">
                     <div class="flex flex-wrap -mx-3 mb-6">
                       <div class="w-full px-3 mb-15 md:mb-0">
-                        <div class="flex tracking-wide text-sm font-bold mb-2" for="grid-first-name">
+                        <div className={`flex tracking-wide text-sm font-bold mb-2 font-${props.fontType}`} for="grid-first-name">
                           Job Title
                           <div class="text-red-500">*</div>
                         </div>
-                        <input value={props.jobData.job_title} name="job_title" onChange={(e) => onValueChange(e)} class="appearance-none block w-full border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="ex. UX UI Designer" />
+                        <input value={props.jobData.job_title} name="job_title" onChange={(e) => onValueChange(e)} class={`appearance-none block w-full border rounded py-3 px-4 mb-3 placeholder:font-${props.fontType} leading-tight focus:outline-none focus:bg-white`} id="grid-first-name" type="text" placeholder="ex. UX UI Designer" />
                         <p id="job_title_error" class="text-red-500 text-xs italic" hidden="true">Please fill out this field.</p>
                       </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                       <div class="w-full px-3 mb-6 md:mb-0">
-                        <div class="flex tracking-wide text-sm font-bold mb-2" for="grid-first-name">
+                        <div className={`flex tracking-wide text-sm font-bold mb-2 font-${props.fontType}`} for="grid-first-name">
                           Company Name
                           <div class="text-red-500">*</div>
                         </div>
-                        <input value={props.jobData.company_name} name="company_name" onChange={(e) => onValueChange(e)} class="appearance-none block w-full border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="ex. Google" />
+                        <input value={props.jobData.company_name} name="company_name" onChange={(e) => onValueChange(e)} class={`appearance-none block w-full border placeholder:font-${props.fontType} rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`} id="grid-first-name" type="text" placeholder="ex. Google" />
                         <p id="company_name_error" class="text-red-500 text-xs italic" hidden="true">Please fill out this field.</p>
                       </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-6">
                       <div class="w-full px-3 mb-6 md:mb-0">
-                        <div class="flex tracking-wide text-sm font-bold mb-2" for="grid-first-name">
+                        <div className={`flex tracking-wide text-sm font-bold mb-2 font-${props.fontType}`} for="grid-first-name">
                           Industry
                           <div class="text-red-500">*</div>
                         </div>
-                        <input value={props.jobData.industry} name="industry" onChange={(e) => onValueChange(e)} class="appearance-none block w-full border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="ex. Information Technology" />
+                        <input value={props.jobData.industry} name="industry" onChange={(e) => onValueChange(e)} class={`appearance-none block w-full placeholder:font-${props.fontType} border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white`} id="grid-first-name" type="text" placeholder="ex. Information Technology" />
                         <p id="industry_error" class="text-red-500 text-xs italic" hidden="true">Please fill out this field.</p>
                       </div>
                     </div>
                     <div class="flex flex-wrap -mx-3 mb-2">
                       <div class="w-1/2 px-3 mb-6 md:mb-0">
-                        <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-city">
+                        <label className={`block tracking-wide text-gray-700 text-sm font-bold mb-2 font-${props.fontType}`} for="grid-city">
                           Location
                         </label>
-                        <input value={props.jobData.location} name="location" onChange={(e) => onValueChange(e)} class="appearance-none block w-full border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-city" type="text" placeholder="ex. Chennai" />
+                        <input value={props.jobData.location} name="location" onChange={(e) => onValueChange(e)} class={`appearance-none block w-full border placeholder:font-${props.fontType} border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500`} id="grid-city" type="text" placeholder="ex. Chennai" />
                       </div>
                       <div class="w-1/2 px-3 mb-6 md:mb-0">
-                        <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-zip">
+                        <label className={`block tracking-wide text-gray-700 text-sm font-bold mb-2 font-${props.fontType}`} for="grid-zip">
                           Remote Type
                         </label>
-                        <input value={props.jobData.remote_type} name="remote_type" onChange={(e) => onValueChange(e)} class="appearance-none block w-full border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-zip" type="text" placeholder="ex. In-office" />
+                        <input value={props.jobData.remote_type} name="remote_type" onChange={(e) => onValueChange(e)} class={`appearance-none placeholder:font-${props.fontType} block w-full border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500`} id="grid-zip" type="text" placeholder="ex. In-office" />
                       </div>
                     </div>
                   </form>
@@ -102,7 +102,7 @@ function StepFirstForm(props) {
                 {/*footer*/}
                 <div className="flex items-center justify-end pt-16 border-solid border-slate-200 rounded-b">
                   <button
-                    className="bg-custom_primary text-white active:bg-emerald-600 font-bold  text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    className={`bg-custom_primary text-white font-${props.fontType} active:bg-emerald-600 font-bold  text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150`}
                     type="button"
                     onClick={handleNextButtonClick}
                   >

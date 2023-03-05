@@ -17,7 +17,7 @@ function App() {
         Create Job
       </button>
       {showModal ? (
-        <StepFirstForm setShowModal={setShowModal} jobData={jobData} setJobData={setJobData}/>
+        <StepFirstForm setShowModal={setShowModal} jobData={jobData} setJobData={setJobData} fontType="poppins"/>
       ) : null}
     </>
   );
