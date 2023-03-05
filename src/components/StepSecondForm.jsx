@@ -40,20 +40,20 @@ function StepSecondForm(props) {
             >
               <div className="relative my-6 mx-auto max-w-3xl">
                 {/*content*/}
-                <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <div className="border-0 rounded-lg p-9 shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
                   {/*header*/}
-                  <div className="flex justify-between p-5 rounded-t">
-                    <h3 className="text-3xl font-semibold">
+                  <div className="flex justify-between rounded-t">
+                    <h3 className="text-xl font-semibold">
                       Create a Job
                     </h3>
-                    <div className="text-2xl font-semibold">
+                    <div className="text-sm font-semibold">
                       Step 2
                     </div>
                   </div>
                   {/*body*/}
-                  <div className="relative p-6 flex-auto">
+                  <div className="relative flex-auto mt-10">
                     <form class="w-full max-w-lg">
-                      <div class="flex flex-wrap -mx-3 mb-2">
+                      <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3 py-2 mb-6 md:mb-0">
                           <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-city">
                             Experience
@@ -64,7 +64,7 @@ function StepSecondForm(props) {
                           </div>
                         </div>
                       </div>
-                      <div class="flex flex-wrap -mx-3 mb-2">
+                      <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3 py-2 mb-6 md:mb-0">
                           <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="grid-city">
                             Salary
@@ -75,7 +75,7 @@ function StepSecondForm(props) {
                           </div>
                         </div>
                       </div>
-                      <div class="flex flex-wrap -mx-3 mb-2">
+                      <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3 py-2 mb-6 md:mb-0">
                           <div class="flex tracking-wide text-sm font-bold mb-2" for="grid-first-name">
                             Total employee
@@ -83,7 +83,7 @@ function StepSecondForm(props) {
                           <input value={props.jobData.total_employees} name="total_employees" onChange={(e) => onValueChange(e)} class="appearance-none block w-full border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="ex. 100" />
                         </div>
                       </div>
-                      <div class="flex flex-wrap -mx-3 mb-2">
+                      <div class="flex flex-wrap -mx-3 mb-6">
                         <div class="w-full px-3 py-2 mb-6 md:mb-0">
                           <div class="flex tracking-wide text-sm font-bold mb-2" for="grid-first-name">
                             Apply type
@@ -103,7 +103,7 @@ function StepSecondForm(props) {
                     </form>
                   </div>
                   {/*footer*/}
-                  <div className="flex items-center justify-end p-6 rounded-b">
+                  <div className="flex items-center justify-end rounded-b">
                     <button
                       className="bg-custom_primary text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                       type="button"

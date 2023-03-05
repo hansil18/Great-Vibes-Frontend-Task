@@ -40,21 +40,21 @@ function StepFirstForm(props) {
           >
             <div className="relative my-6 mx-auto max-w-3xl">
               {/*content*/}
-              <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white">
+              <div className="border-0 rounded-lg shadow-lg relative p-9 flex flex-col w-full bg-white">
                 {/*header*/}
-                <div className="flex justify-between p-5 border-solid border-slate-200 rounded-t">
-                  <h3 className="text-3xl font-semibold">
+                <div className="flex justify-between border-solid border-slate-200 rounded-t">
+                  <h3 className="text-xl font-semibold">
                     Create a Job
                   </h3>
-                  <div className="text-2xl font-semibold">
+                  <div className="text-sm font-semibold">
                     Step 1
                   </div>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto">
+                <div className="relative flex-auto mt-10">
                   <form class="w-full max-w-lg">
                     <div class="flex flex-wrap -mx-3 mb-6">
-                      <div class="w-full px-3 mb-6 md:mb-0">
+                      <div class="w-full px-3 mb-15 md:mb-0">
                         <div class="flex tracking-wide text-sm font-bold mb-2" for="grid-first-name">
                           Job Title
                           <div class="text-red-500">*</div>
@@ -100,7 +100,7 @@ function StepFirstForm(props) {
                   </form>
                 </div>
                 {/*footer*/}
-                <div className="flex items-center justify-end p-6 border-solid border-slate-200 rounded-b">
+                <div className="flex items-center justify-end pt-16 border-solid border-slate-200 rounded-b">
                   <button
                     className="bg-custom_primary text-white active:bg-emerald-600 font-bold  text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
