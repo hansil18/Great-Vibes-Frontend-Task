@@ -6,7 +6,7 @@ function JobsDetailsPage(props) {
       <div class="grid grid-cols-2 gap-4 p-4 overflow-y-auto absolute overflow-x-hidden w-full z-50">
         {
           props.jobDetails ?
-            props.jobDetails.map((job) => (
+            props.jobDetails.filter((job) => (job.is_quick_apply === props.jobData.is_quick_apply)).map((job) => (
               <div class="flex flex-col bg-white border rounded-lg mx-5 md:flex-row px-4 py-6">
                 <img class="my-1 ml-1 w-12 h-12 rounded" src="https://images.ctfassets.net/4cd45et68cgf/Rx83JoRDMkYNlMC9MKzcB/2b14d5a59fc3937afd3f03191e19502d/Netflix-Symbol.png?w=684&h=456" />
                 <div class="my-1 mx-3 w-1/2 flex flex-col justify-start">
@@ -44,7 +44,7 @@ function JobsDetailsPage(props) {
                           className={`bg-transparent font-${props.fontType} text-custom_primary my-2 hover:bg-custom_primary text-custom_primay text-sm font-semibold hover:text-white py-2 px-2 border border-custom_primary hover:border-transparent rounded`}
                           type="button"
                         >
-                          {job.is_quick_apply ? "Quick Apply" : "External Apply"}
+                          External Apply
                         </button>
                     }
                   </div>
